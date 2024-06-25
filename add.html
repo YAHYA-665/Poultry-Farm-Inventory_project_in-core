@@ -1,0 +1,63 @@
+<html>
+<head>
+    <link rel="stylesheet" href="CSS/Dashboard.css">
+    <title>Add Data</title>
+</head>
+
+<body>
+<br/>
+<h3 style="text-align: center">Add new stock</h3>
+<a class="home" href="index.php">Home</a>
+<br/><br/>
+<div id="msg"></div>
+
+<form action="add.php" method="post" name="form1">
+    <table style="width: 25%; border: 0">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td><input type="number" name="quantity" placeholder="Quantity" required></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Medicines">Medicines</option>
+                    <option value="Eggs">Eggs</option>
+                    <option value="Breed">Breed</option>
+                    <option value="Feed">Feed</option>
+                    <option value="Chicks">Chicks</option>
+                    <option value="Medications">Medications</option>
+                    <option value="Equipment">Equipment</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Pricing</td>
+            <td><input type="number" name="pricing" placeholder="Pricing" required></td>
+        </tr>
+        <tr>
+            <td>Entry Date</td>
+            <td><input type="date" name="date" class="datepicker-input" required></td>
+        </tr>
+<!--        <tr>-->
+<!--            <td>Stock In Quantity</td>-->
+<!--            <td><input type="number" name="stock_in_quantity" placeholder="Stock In Quantity"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Stock Out Quantity</td>-->
+<!--            <td><input type="number" name="stock_out_quantity" placeholder="Stock Out Quantity"></td>-->
+<!--        </tr>-->
+        <tr>
+            <td></td>
+            <td><input type="submit" name="Submit" value="Save"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+

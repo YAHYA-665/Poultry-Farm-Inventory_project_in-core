@@ -1,0 +1,205 @@
+body {
+    font-family: 'ubuntu-regular', "Schadow BT";
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 500;
+    color: #553c9a;
+    /*border: 4px solid #000;*/
+    text-shadow: 0px 4px 10px rgba(179, 147, 211, 0.8),
+                 2px 2px 4px rgba(179, 147, 211, 0.1),
+                 3px 4px 4px rgba(179, 147, 211, 0.15),
+                 4px 6px 4px rgba(179, 147, 211, 0.2),
+                 5px 8px 4px rgba(179, 147, 211, 0.25);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 70px;
+    font-weight: normal;
+    color: #fdfdfe;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+    /*font-family: 'Ultra', sans-serif;*/
+}
+h3{
+    margin: 1em 0 0.5em 0;
+    color: #553c9a;
+    font-weight: normal;
+    /*font-family: 'Ultra', sans-serif;*/
+    font-size: 50px;
+    line-height: 42px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+input[type="submit"],
+input[type="password"]{
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+    color: #fff;
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    padding: 5px 10px;
+    margin-left: 70px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-edit, .btn-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    color: #fff;
+}
+
+.btn-delete {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,67,67,1) 0%, rgba(111,27,27,1) 90% );
+    color: #fff;
+}
+a {
+    text-decoration: none;
+}
+.add-new-data{
+    padding: 10px 10px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+    color: #fff;
+}
+
+.home{
+    padding: 5px 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: radial-gradient( circle 911px at 0.4% 50.5%,  rgba(187,68,48,1) 18.7%, rgba(21,30,33,1) 90% );
+    color: #fff;
+}
+.result{
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-top: 20%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: purple;
+    color: #fff;
+}
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+.btn-stock-in{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #552E5A;
+    color: #fff;
+}
+#btn-stock-inn{
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% );
+    color: #fff;
+    cursor: pointer;
+}
+#btn-stock-out{
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-image: radial-gradient( circle 1192px at 21.5% 49.5%,  rgba(91,21,55,1) 0.1%, rgba(0,0,0,1) 100.2% );
+    color: #fff;
+}
