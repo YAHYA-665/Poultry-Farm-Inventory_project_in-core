@@ -10,39 +10,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST['name'];
         $quantity = $_POST['quantity'];
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $crud = new Crud();
-            $id = $crud->escape_string($_POST['id']);
-            $name = $crud->escape_string($_POST['name']);
-
+        // Perform stock-in operation
         $result = $crud->stockInItem($name, $quantity);
 
         if ($result) {
             $_SESSION['success_message'] = "Stock-in successful for '$name'";
             header("Location: index.php");
             exit();
-        }} else {
+        } else {
             echo "Error: Stock-in operation failed.";
         }
     } elseif (isset($_POST['stock_out'])) {
         $name = $_POST['name'];
         $quantity = $_POST['quantity'];
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $crud = new Crud();
-            $id = $crud->escape_string($_POST['id']);
-            $name = $crud->escape_string($_POST['name']);
-
+        // Perform stock-out operation
         $result = $crud->stockOutItem($name, $quantity);
 
         if ($result) {
-            $_SESSION['success_message'] = "Stock-out successful '$name'";
+            $_SESSION['success_message'] = "Stock-out successful for '$name'";
             header("Location: index.php");
             exit();
-        }}else {
+        } else {
             echo "Error: Stock-out operation failed.";
         }
     }
+}
+
+// Fetch item name based on ID from the URL
+if (isset($_GET['id'])) {
+    $id = $crud->escape_string($_GET['id']);
+    $result = $crud->getData("SELECT * FROM users WHERE id=$id");
+
+    if ($result) {
+        $name = $result[0]['name']; // Assuming 'name' is a field in your 'users' table
+    } else {
+        $name = ''; // Handle case where no data is found (optional)
+    }
+} else {
+    $name = ''; // Handle case where ID is not provided in the URL (optional)
 }
 ?>
 
@@ -58,8 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h2 style="text-align: center">Stock Operations</h2>
 <a class="home" href="index.php">Home</a>
 <form style="width: 25%; border: 0; margin-left: 10%" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <label for="name">Item Name:</label>
-    <input type="text" name="name" required><br><br>
+    <label for="name">Name:</label>
+    <span><?php echo htmlspecialchars($name); ?></span><br><br>
     <label for="quantity">Quantity:</label>
     <input type="number" name="quantity" required><br><br>
     <input id="btn-stock-inn" type="submit" name="stock_in" value="Stock In">
